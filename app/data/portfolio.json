@@ -1,0 +1,298 @@
+{
+  "updated_at": "2026-11-16",
+  "profile": {
+    "name": "Diogo Packer Elias",
+    "headline": "Software Engineer | Backend Python | Sistemas distribuídos",
+    "location": "Guarulhos, São Paulo, Brasil",
+    "summary": "Desenvolvo APIs, integrações e serviços backend em Python para ambientes de missão crítica. Atuo com arquitetura limpa, processamento assíncrono e otimização de performance, conectando engenharia de software e dados. Como referência técnica backend, contribuo com decisões de arquitetura, planejamento, revisão de código e orientação a desenvolvedores.",
+    "links": {
+      "github": "https://github.com/DiogoPacker",
+      "linkedin": "https://www.linkedin.com/in/diogo-packer-elias-11a3b7b6/"
+    },
+    "email": "diogopacker@hotmail.com",
+    "phone": "+55 (11) 94335-1707",
+    "whatsapp": "https://wa.me/5511943351707"
+  },
+  "skills": [
+    {
+      "category": "Backend",
+      "technologies": [
+        "Python",
+        "Django",
+        "Django REST Framework",
+        "FastAPI",
+        "REST APIs",
+        "AsyncIO"
+      ]
+    },
+    {
+      "category": "Dados e processamento assíncrono",
+      "technologies": [
+        "PostgreSQL",
+        "MongoDB",
+        "Redis",
+        "Celery",
+        "Databricks"
+      ]
+    },
+    {
+      "category": "Arquitetura",
+      "technologies": [
+        "Clean Architecture",
+        "SOLID",
+        "Microsserviços",
+        "Sistemas distribuídos",
+        "Integração de sistemas"
+      ]
+    },
+    {
+      "category": "Cloud e operação",
+      "technologies": [
+        "Azure",
+        "AWS",
+        "Docker",
+        "Kubernetes",
+        "GitHub Actions",
+        "Jenkins",
+        "CI/CD",
+        "Grafana"
+      ]
+    },
+    {
+      "category": "Segurança",
+      "technologies": [
+        "SSO",
+        "JWT",
+        "OAuth",
+        "Controle de permissões"
+      ]
+    },
+    {
+      "category": "Dados e IA — formação MBA",
+      "technologies": [
+        "Machine Learning",
+        "Engenharia de dados",
+        "MLOps",
+        "Modelagem",
+        "Automação"
+      ]
+    }
+  ],
+  "experiences": [
+    {
+      "id": "backend-ii",
+      "role": "Software Engineer II",
+      "start": "2025-12",
+      "end": null,
+      "context": "Plataforma corporativa de monitoramento e logística marítima no setor de energia.",
+      "contributions": [
+        "Referência técnica backend e orientação de três desenvolvedores juniores.",
+        "Separação de serviço de monitoramento em container dedicado com FastAPI.",
+        "Implementação de jobs assíncronos com Celery e cache compartilhado em Redis.",
+        "Análise de gargalos de memória, estabilidade e latência em produção."
+      ],
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "Django",
+        "PostgreSQL",
+        "Celery",
+        "Redis",
+        "Docker"
+      ]
+    },
+    {
+      "id": "backend-i-maritime",
+      "role": "Software Engineer I",
+      "start": "2025-06",
+      "end": "2025-11",
+      "context": "Sistema de rastreamento de ativos marítimos.",
+      "contributions": [
+        "Desenvolvimento e refatoração de APIs e integrações.",
+        "Migração de rotinas acopladas à inicialização da API para orquestração externa com Control-M.",
+        "Promoção para Software Engineer II após seis meses."
+      ],
+      "technologies": [
+        "Python",
+        "Django",
+        "PostgreSQL",
+        "Control-M"
+      ]
+    },
+    {
+      "id": "backend-i-industrial",
+      "role": "Software Engineer I",
+      "start": "2023-01",
+      "end": "2025-05",
+      "context": "Soluções corporativas de monitoramento industrial e logística marítima.",
+      "contributions": [
+        "Backend para interpretação de inferências de Machine Learning e disponibilização de probabilidades de falha.",
+        "Persistência de histórico de inferências com Azure Functions e MongoDB.",
+        "Integração de telemetria externa e tratamento de dados nulos ou malformados."
+      ],
+      "technologies": [
+        "Python",
+        "Django",
+        "PostgreSQL",
+        "MongoDB",
+        "Azure Functions"
+      ]
+    },
+    {
+      "id": "it-support",
+      "role": "IT Support Analyst",
+      "start": "2021-04",
+      "end": "2022-12",
+      "context": "Sustentação de TI corporativa em múltiplas operações.",
+      "contributions": [
+        "Suporte N2/N3, troubleshooting, acompanhamento de SLA e apoio a integrações.",
+        "Scripts Python para automação de diagnósticos e triagem de chamados."
+      ],
+      "technologies": [
+        "Python",
+        "Automação",
+        "Troubleshooting"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "async-monitoring",
+      "title": "Monitoramento com menor latência",
+      "context": "Monitoramento de ativos e logística marítima.",
+      "challenge": "Processos concentrados em um único container causavam consumo excessivo de memória e reinicializações.",
+      "solution": "Serviço dedicado em FastAPI, PostgreSQL compartilhado, jobs em Celery e cache em Redis.",
+      "outcome": "Eliminação das quedas por falta de memória e redução de respostas GET de 5–10 segundos para 10–300 milissegundos, conforme relato no currículo.",
+      "evidence": "Resultado profissional informado pelo autor; código e métricas internos não publicados.",
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "PostgreSQL",
+        "Celery",
+        "Redis",
+        "Docker"
+      ]
+    },
+    {
+      "id": "job-orchestration",
+      "title": "Rotinas independentes da inicialização da API",
+      "context": "Integrações de uma plataforma de rastreamento.",
+      "challenge": "Jobs acoplados à inicialização e uso de cache local dificultavam gerenciamento e rastreabilidade.",
+      "solution": "Migração da execução das rotinas para um orquestrador corporativo externo.",
+      "outcome": "Rotinas centralizadas em uma estrutura gerenciável, com maior previsibilidade operacional.",
+      "evidence": "Experiência descrita pelo autor nos currículos; sem benchmark público.",
+      "technologies": [
+        "Python",
+        "Django",
+        "PostgreSQL",
+        "Control-M"
+      ]
+    },
+    {
+      "id": "predictive-monitoring",
+      "title": "Backend para monitoramento preditivo",
+      "context": "Monitoramento de equipamentos industriais.",
+      "challenge": "Disponibilizar resultados de inferência para a interface e preservar o histórico de processamento.",
+      "solution": "Pipeline Python para interpretar inferências e Azure Functions para persistência em MongoDB, além de validação dos dados de integrações externas.",
+      "outcome": "Probabilidades de falha disponibilizadas à interface e maior robustez de jobs diante de dados inválidos.",
+      "evidence": "Experiência descrita pelo autor nos currículos; código corporativo não publicado.",
+      "technologies": [
+        "Python",
+        "Azure Functions",
+        "MongoDB",
+        "Django",
+        "PostgreSQL"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "f1-save-studio",
+      "title": "F1 Save Studio",
+      "description": "Um hobby que virou software: editor de saves do F1 Manager 2024. Permite planejar contratos, comparar pilotos, ajustar equipes e exportar uma nova cópia do save. Backend em FastAPI e edição de dados em SQLite, com histórico e opção de desfazer.",
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "SQLite",
+        "JavaScript"
+      ],
+      "repository": "https://github.com/DiogoPacker/EditorF1M",
+      "kind": "Aplicação pessoal"
+    },
+    {
+      "id": "flightlab",
+      "title": "FlightLab",
+      "description": "Do estudo acadêmico a um produto de dados: análise de voos de Nova York em 2013, dashboard interativo e previsão de atrasos. Reúne validação de dados, regressão logística, API e um assistente de IA opcional. Um experimento educacional com limitações documentadas.",
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "Streamlit",
+        "scikit-learn",
+        "Plotly"
+      ],
+      "repository": "https://github.com/DiogoPacker/projetinho_mba",
+      "kind": "Dados e Machine Learning"
+    },
+    {
+      "id": "app-vagas",
+      "title": "App Vagas",
+      "description": "Uma forma de organizar a busca por oportunidades. Cadastra o perfil profissional, recebe links ou textos de vagas e calcula a aderência, mostrando um ranking com pontos fortes e lacunas. Construído com FastAPI, sem scraping autenticado do LinkedIn.",
+      "technologies": [
+        "Python",
+        "FastAPI"
+      ],
+      "repository": "https://github.com/DiogoPacker/App-Vagas",
+      "kind": "Projeto pessoal"
+    },
+    {
+      "id": "user-authentication",
+      "title": "Autenticação de usuários",
+      "description": "Um projeto para explorar autenticação e controle de acesso em APIs. O README descreve registro, login, recuperação de senha e autorização por papéis com Django REST Framework e tokens JWT.",
+      "technologies": [
+        "Python",
+        "Django",
+        "Django REST Framework",
+        "JWT"
+      ],
+      "repository": "https://github.com/DiogoPacker/user_authentication",
+      "kind": "Projeto público"
+    },
+    {
+      "id": "task-management",
+      "title": "API de gerenciamento de tarefas",
+      "description": "Uma API REST para organizar tarefas, construída com Flask e SQLAlchemy. Um projeto direto para praticar a separação entre rotas, modelos de dados e persistência no backend.",
+      "technologies": [
+        "Python",
+        "Flask",
+        "SQLAlchemy"
+      ],
+      "repository": "https://github.com/DiogoPacker/task_management",
+      "kind": "Projeto público"
+    },
+    {
+      "id": "car-rental",
+      "title": "API de locação de veículos",
+      "description": "Um exercício técnico de backend para locação de veículos. A API oferece consulta de carros, criação e devolução de locações e estatísticas, usando Django REST Framework, SQLite e execução com Docker.",
+      "technologies": [
+        "Python",
+        "Django REST Framework",
+        "SQLite",
+        "Docker"
+      ],
+      "repository": "https://github.com/DiogoPacker/Backend",
+      "kind": "Exercício técnico"
+    }
+  ],
+  "education": [
+    {
+      "title": "MBA em Data Science & Advanced Analytics",
+      "start_year": 2024,
+      "end_year": 2025
+    },
+    {
+      "title": "Análise e Desenvolvimento de Sistemas",
+      "start_year": 2019,
+      "end_year": 2021
+    }
+  ]
+}
