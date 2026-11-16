@@ -1,5 +1,9 @@
 # Diogo Packer Elias — Portfolio API
 
+**Portfólio online:** [diogo-packer-portfolio.onrender.com](https://diogo-packer-portfolio.onrender.com)
+
+[Documentação da API](https://diogo-packer-portfolio.onrender.com/docs) · [Status do serviço](https://diogo-packer-portfolio.onrender.com/health)
+
 Portfólio profissional com interface web e API REST em Python/FastAPI. A raiz abre a página visual: fundo preto, acentos roxos e lilás, tipografia ampliada, apresentação, foto, projetos filtráveis, estudos de caso expansíveis, competências, trajetória e contatos diretos. A documentação interativa continua em `/docs`.
 
 A rolagem revela os blocos em sequência, movimenta suavemente o retrato, preenche a linha da trajetória e atualiza a navegação por capítulos e a barra de progresso. O movimento respeita `prefers-reduced-motion`; o conteúdo permanece acessível sem JavaScript. A camada visual de movimento está em `app/static/motion.css`.

@@ -1,5 +1,7 @@
 # Publicar no Render
 
+Versão publicada: **https://diogo-packer-portfolio.onrender.com**.
+
 Este projeto publica a interface e a API no mesmo Web Service. Não exige banco, disco persistente nem chaves de API.
 
 ## 1. Enviar o commit para o GitHub
