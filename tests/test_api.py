@@ -49,7 +49,11 @@ def test_public_data_only_has_authorized_contacts_and_no_employer_fields():
     data = client.get('/api/v1/portfolio').json()
     serialized = json.dumps(data, ensure_ascii=False)
     assert set(re.findall(r'[\w.+-]+@[\w.-]+\.[a-zA-Z]{2,}', serialized)) == {'diogopacker@hotmail.com'}
-    assert data['profile']['whatsapp'] == 'https://wa.me/5511943351707'
+    assert 'phone' not in data['profile']
+    from urllib.parse import parse_qs, urlparse
+    link = urlparse(data['profile']['whatsapp'])
+    assert link.netloc == 'wa.me'
+    assert parse_qs(link.query)['text'] == ['Olá Diogo, tudo bem? Me interessei pelo seu perfil, vamos conversar?']
     for experience in data['experiences']:
         assert set(experience) == {
             'id', 'role', 'start', 'end', 'context', 'contributions', 'technologies'
@@ -67,6 +71,22 @@ def test_interface_contacts_and_safe_rendering():
     assert '&lt;script&gt;alert(1)&lt;/script&gt;' in html
     assert 'mailto:diogopacker@hotmail.com' in html
     assert 'https://wa.me/5511943351707' in html
+    assert '+55 (11) 94335-1707' not in html
+    assert '[[PHONE]]' not in html
+    from html.parser import HTMLParser
+    from urllib.parse import parse_qs, urlparse
+
+    class Links(HTMLParser):
+        hrefs = []
+
+        def handle_starttag(self, tag, attrs):
+            if tag == 'a':
+                self.hrefs.append(dict(attrs).get('href', ''))
+
+    parser = Links()
+    parser.feed(html)
+    whatsapp = next(url for url in parser.hrefs if url.startswith('https://wa.me/'))
+    assert parse_qs(urlparse(whatsapp).query)['text'] == ['Olá Diogo, tudo bem? Me interessei pelo seu perfil, vamos conversar?']
 
 
 def test_no_write_or_source_file_access():

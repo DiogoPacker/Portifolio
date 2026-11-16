@@ -48,7 +48,7 @@ def render_portfolio(data: Portfolio) -> str:
         'NAME': escape(data.profile.name), 'SUMMARY': escape(data.profile.summary),
         'LOCATION': escape(data.profile.location), 'GITHUB': escape(str(data.profile.links.github)),
         'LINKEDIN': escape(str(data.profile.links.linkedin)), 'EMAIL': escape(data.profile.email),
-        'PHONE': escape(data.profile.phone), 'WHATSAPP': escape(str(data.profile.whatsapp)),
+        'WHATSAPP': escape(str(data.profile.whatsapp)),
         'PROJECTS': ''.join(projects), 'CASES': ''.join(cases),
         'EXPERIENCES': ''.join(experiences), 'SKILLS': skills, 'EDUCATION': education,
         'PROJECT_COUNT': str(len(data.projects)),

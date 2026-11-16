@@ -17,7 +17,6 @@ class Profile(PublicModel):
     summary: str
     links: Links
     email: str
-    phone: str
     whatsapp: HttpUrl
 
 

@@ -41,7 +41,7 @@ Exemplo: `/api/v1/projects?technology=FastAPI`. O filtro usa nome exato sem dist
 
 Edite `app/data/portfolio.json` e reinicie o serviço. A validação dos modelos ocorre na importação da aplicação; campos desconhecidos são rejeitados. Não exige banco de dados, credenciais ou consultas externas em tempo de execução. As rotas são apenas de leitura.
 
-Nomes de empregadores, clientes e instituições foram removidos. Por solicitação do autor, e-mail, telefone e WhatsApp dos currículos são públicos na interface e na API. Os PDFs originais não foram copiados para o projeto nem são servidos. Links externos podem conter informações omitidas aqui. Datas e contextos continuam visíveis: o conteúdo não promete anonimato absoluto.
+Nomes de empregadores, clientes e instituições foram removidos. E-mail e link de WhatsApp são públicos. O número não é exibido como texto nem em um campo `phone` na API; ele faz parte da URL necessária para abrir o WhatsApp. O botão preenche a mensagem “Olá Diogo, tudo bem? Me interessei pelo seu perfil, vamos conversar?”, que o visitante pode revisar e enviar. Os PDFs originais não foram copiados para o projeto nem são servidos. Links externos podem conter informações omitidas aqui. Datas e contextos continuam visíveis: o conteúdo não promete anonimato absoluto.
 
 A foto local em `app/static/profile.jpg` foi fornecida pelo autor, substituindo a imagem inicial do GitHub. Para trocar, substitua esse arquivo e atualize a versão na URL da imagem no HTML para evitar cache antigo. Cores e layout ficam em `app/static/style.css`, a estrutura em `app/static/index.html` e os filtros em `app/static/site.js`. O HTML é renderizado no servidor a partir do mesmo JSON da API, com escape de conteúdo.
 
