@@ -30,6 +30,10 @@ h2{font-size:clamp(35px,3.8vw,54px)}
 .project-card>p{font-size:17px;line-height:1.85}
 .project-top .mono{font-size:12px}
 .repo-link{font-size:16px}
+.project-links{margin-top:23px;padding-top:16px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:14px 22px;align-items:center;justify-content:space-between}
+.project-links .repo-link{border:0;padding:0;margin:0;gap:12px}
+.live-link{display:inline-flex;align-items:center;gap:12px;padding:8px 12px;border:1px solid #bb91ff66;border-radius:5px;color:var(--accent);background:#bb91ff0c;font-size:15px;transition:background .2s}
+.live-link:hover{background:#bb91ff22}
 .tag{font-size:12px;padding:5px 10px}
 .case summary strong{font-size:27px}
 .case summary .eyebrow{font-size:12px}

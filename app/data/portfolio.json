@@ -216,6 +216,7 @@
         "JavaScript"
       ],
       "repository": "https://github.com/DiogoPacker/EditorF1M",
+      "live_url": "https://editorf1m.onrender.com",
       "kind": "Aplicação pessoal"
     },
     {
@@ -230,6 +231,7 @@
         "Plotly"
       ],
       "repository": "https://github.com/DiogoPacker/projetinho_mba",
+      "live_url": "https://flightlab-dashboard.onrender.com",
       "kind": "Dados e Machine Learning"
     },
     {

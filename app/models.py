@@ -52,6 +52,7 @@ class Project(PublicModel):
     description: str
     technologies: list[str]
     repository: HttpUrl
+    live_url: HttpUrl | None = None
     kind: str
 
 

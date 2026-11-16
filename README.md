@@ -4,6 +4,8 @@
 
 [Documentação da API](https://diogo-packer-portfolio.onrender.com/docs) · [Status do serviço](https://diogo-packer-portfolio.onrender.com/health)
 
+Os cards do [F1 Save Studio](https://editorf1m.onrender.com) e do [FlightLab](https://flightlab-dashboard.onrender.com) incluem os botões de código no GitHub e de acesso ao projeto online. Os mesmos endereços são expostos no campo opcional `live_url` dos projetos na API. Para adicionar uma demonstração a outro projeto, preencha esse campo no JSON.
+
 Portfólio profissional com interface web e API REST em Python/FastAPI. A raiz abre a página visual: fundo preto, acentos roxos e lilás, tipografia ampliada, apresentação, foto, projetos filtráveis, estudos de caso expansíveis, competências, trajetória e contatos diretos. A documentação interativa continua em `/docs`.
 
 A rolagem revela os blocos em sequência, movimenta suavemente o retrato, preenche a linha da trajetória e atualiza a navegação por capítulos e a barra de progresso. O movimento respeita `prefers-reduced-motion`; o conteúdo permanece acessível sem JavaScript. A camada visual de movimento está em `app/static/motion.css`.

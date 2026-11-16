@@ -99,3 +99,18 @@ def test_schema_documents_typed_responses():
     schema = client.get('/openapi.json').json()
     response = schema['paths']['/api/v1/portfolio']['get']['responses']['200']
     assert response['content']['application/json']['schema']['$ref'].endswith('/Portfolio')
+
+
+def test_live_project_links_in_api_and_interface():
+    html = client.get('/').text
+    expected = {
+        'f1-save-studio': 'https://editorf1m.onrender.com/',
+        'flightlab': 'https://flightlab-dashboard.onrender.com/',
+    }
+    for project_id, url in expected.items():
+        project = client.get(f'/api/v1/projects/{project_id}').json()
+        assert project['live_url'] == url
+        assert f'href="{url}"' in html
+        assert f'href="{project["repository"]}"' in html
+    assert html.count('class="live-link"') == 2
+    assert client.get('/api/v1/projects/app-vagas').json()['live_url'] is None

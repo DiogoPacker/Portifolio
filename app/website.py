@@ -24,12 +24,16 @@ def render_portfolio(data: Portfolio) -> str:
     projects = []
     for index, project in enumerate(data.projects):
         category = 'dados' if project.id == 'flightlab' else 'aplicacoes' if project.id in {'app-vagas', 'f1-save-studio'} else 'apis'
+        live_link = (
+            f'<a class="live-link" href="{escape(str(project.live_url))}" target="_blank" rel="noopener noreferrer">Abrir projeto online <span aria-hidden="true">↗</span></a>'
+            if project.live_url else ''
+        )
         projects.append(f'''
         <article class="project-card" data-category="{category}">
           <div class="project-top"><span class="project-icon" aria-hidden="true">{icons.get(project.id, '↗')}</span><span class="mono">0{index + 1} / {escape(project.kind)}</span></div>
           <h3>{escape(project.title)}</h3><p>{escape(project.description)}</p>
           <div class="tags">{tags(project.technologies)}</div>
-          <a class="repo-link" href="{escape(str(project.repository))}" target="_blank" rel="noopener noreferrer">Explorar no GitHub <span aria-hidden="true">↗</span></a>
+          <div class="project-links"><a class="repo-link" href="{escape(str(project.repository))}" target="_blank" rel="noopener noreferrer">Explorar no GitHub <span aria-hidden="true">↗</span></a>{live_link}</div>
         </article>''')
     cases = []
     for index, case in enumerate(data.cases):
